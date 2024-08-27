@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var ctrlSign = require('../Controllers/sign');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -14,5 +15,6 @@ router.get('/location/review', function(req, res, next) {
 router.get('/about', function(req, res, next) {
   res.render('index', { title: 'about' });
 });
+router.get('/signin', ctrlSign.signin)
 
 module.exports = router;
